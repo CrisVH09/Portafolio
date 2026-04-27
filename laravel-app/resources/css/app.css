@@ -1,0 +1,164 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Segoe UI', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-sans);
+    color: #1f2937;
+    background: #f9fafb;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1000px, calc(100% - 2rem));
+    margin: 0 auto;
+}
+
+.header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.nav {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    color: #4b5563;
+}
+
+.hero {
+    padding: 4rem 0;
+    background: #ffffff;
+}
+
+.hero h1 {
+    margin: 0 0 1rem;
+    font-size: 2.5rem;
+}
+
+.hero-text {
+    max-width: 700px;
+    line-height: 1.7;
+    color: #4b5563;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    border: 1px solid #2563eb;
+}
+
+.button-primary {
+    color: #ffffff;
+    background: #2563eb;
+}
+
+.button-secondary {
+    color: #2563eb;
+    background: #ffffff;
+}
+
+.section {
+    padding: 3rem 0;
+}
+
+.section h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.section p {
+    line-height: 1.7;
+    color: #4b5563;
+}
+
+.section-light {
+    background: #ffffff;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    padding: 1.25rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    background: #ffffff;
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.contact-link {
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.footer {
+    padding: 1.5rem 0;
+    border-top: 1px solid #e5e7eb;
+    background: #ffffff;
+}
+
+.footer p {
+    margin: 0;
+    color: #6b7280;
+}
+
+@media (max-width: 640px) {
+    .header-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+}
